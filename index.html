@@ -2,20 +2,21 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Jasa Service Mesin CNC & Retrofit CNC SYNTEC | Dynamix Vision</title>
-
-  <meta name="description" content="Jasa service, retrofit & troubleshooting mesin CNC SYNTEC di Indonesia. Spesialis Syntec, Delta, Yaskawa, Mitsubishi.">
-  <meta name="keywords" content="CNC automation, retrofit CNC, service CNC, Syntec Indonesia, perbaikan mesin CNC">
+  <meta name="viewport" content="width=1280, initial-scale=1.0"/>
+  <title>Syntec Indonesia – Service & Retrofit CNC Syntec | Dynamix Vision Automation</title>
+  <meta name="description" content="Supplier & spesialis CNC Syntec Indonesia. Jasa service, retrofit, instalasi, dan troubleshooting mesin CNC Syntec, Delta, Yaskawa, Mitsubishi di Bogor & seluruh Indonesia.">
+  <meta name="keywords" content="syntec indonesia, supplier syntec indonesia, CNC syntec, retrofit CNC syntec, service mesin CNC, troubleshooting CNC, CNC automation indonesia, delta CNC, yaskawa indonesia, mitsubishi CNC, perbaikan mesin CNC bogor">
   <meta name="author" content="Dynamix Vision Automation">
-
+  <!-- Open Graph (biar bagus kalau dishare di WA/sosmed) -->
+  <meta property="og:title" content="Syntec Indonesia – Service & Retrofit CNC | Dynamix Vision Automation">
+  <meta property="og:description" content="Supplier & spesialis CNC Syntec Indonesia. Service, retrofit, instalasi mesin CNC profesional.">
+  <meta property="og:url" content="https://dynamixvision.github.io/DynamixVisionAutomation/">
+  <meta property="og:type" content="website">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
-
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css"/>
 </head>
@@ -34,7 +35,11 @@
       </div>
     </div>
     <div class="nav-menu">
-      <a>Beranda</a><a>Layanan</a><a>Retrofit</a><a>Sparepart</a><a>Kontak</a>
+      <a href="#beranda" onclick="navScroll(event,'beranda')">Beranda</a>
+      <a href="#layanan" onclick="navScroll(event,'layanan')">Layanan</a>
+      <a href="#retrofit" onclick="navScroll(event,'retrofit')">Retrofit</a>
+      <a href="#sparepart" onclick="navScroll(event,'sparepart')">Sparepart</a>
+      <a href="#kontak" onclick="navScroll(event,'kontak')">Kontak</a>
     </div>
     <button class="nav-btn" onclick="window.open('https://wa.me/6289855551050?text=Halo%20Dynamix%2C%20saya%20ingin%20konsultasi%20gratis%20mengenai%20layanan%20CNC%20Anda.','_blank')">Konsultasi Gratis</button>
   </nav>
@@ -42,7 +47,7 @@
 
 
   <!-- ===== VIDEO / IMAGE SLIDESHOW ===== -->
-  <div class="vslide-wrap" id="vslideshow">
+  <div class="vslide-wrap" id="beranda">
 
     <!-- Slide 1: Trading Mesin CNC -->
     <div class="vslide active" id="vs-0">
@@ -180,9 +185,10 @@
   <!-- ===== END SLIDESHOW ===== -->
 
   <div class="section-accent"></div>
+  <div id="retrofit" style="position:relative;margin-top:-70px;pointer-events:none"></div>
 
   <!-- LAYANAN -->
-  <div class="section">
+  <div class="section" id="layanan">
     <div class="eyebrow"><div class="eline"></div><span>LAYANAN</span></div>
     <div class="sec-title">Klik layanan untuk detail lengkap</div>
     <div class="sec-desc">Pilih layanan di bawah untuk melihat deskripsi, fitur, dan informasi lengkap.</div>
@@ -209,7 +215,7 @@
   </div>
 
   <!-- DRIVER -->
-  <div class="driver-section">
+  <div class="driver-section" id="sparepart">
     <div class="eyebrow"><div class="eline"></div><span>PERBAIKAN & SPAREPART DRIVER</span></div>
     <div class="sec-title" style="font-size:15px;margin-bottom:14px">Brand yang kami layani</div>
     <div class="driver-track-wrap">
@@ -291,11 +297,11 @@
   </div>
 
   <!-- CONTACT -->
-  <div class="contact-section">
+  <div class="contact-section" id="kontak">
     <div class="eyebrow"><div class="eline"></div><span>KONTAK</span></div>
     <div class="sec-title" style="font-size:15px;margin-bottom:14px">Hubungi kami sekarang</div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch">
+    <div style="display:grid;grid-template-columns:0.8fr 1fr 0.8fr;gap:12px;align-items:stretch">
 
       <!-- BINGKAI KIRI: info kontak -->
       <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden">
@@ -372,6 +378,25 @@
         </div>
       </div>
 
+      <!-- BINGKAI TENGAH: flowchart animasi alur layanan -->
+      <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1">
+          <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase;flex-shrink:0">Alur Layanan</div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:0" id="flowChartWrap">
+
+            <div style="display:flex;flex-direction:column;align-items:stretch;gap:0" id="fcSteps"></div>
+
+            <div style="margin-top:6px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
+              <div id="fcProgress" style="height:100%;width:0%;background:#378ADD;border-radius:2px;transition:width .12s linear"></div>
+            </div>
+
+            <div id="fcInfo" style="margin-top:6px;background:rgba(29,111,216,0.1);border:1px solid rgba(29,111,216,0.2);border-radius:6px;padding:6px 8px;min-height:36px">
+              <div id="fcInfoText" style="font-size:9px;color:rgba(180,210,255,0.8);line-height:1.5">Memulai alur layanan...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- BINGKAI KANAN: galeri foto slideshow -->
       <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden;display:flex;flex-direction:column">
         <div style="padding:10px 15px;display:flex;flex-direction:column;gap:7px;flex:1">
@@ -397,6 +422,97 @@
 
           <div style="font-size:9px;color:rgba(255,255,255,0.3);text-align:center;line-height:1.5">Dokumentasi proyek &amp; workshop Dynamix Vision Automation</div>
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FORM LAPORAN -->
+  <div class="section" id="laporan" style="background:linear-gradient(135deg,#050f1e 0%,#091525 100%);padding:32px 24px">
+    <div class="eyebrow"><div class="eline"></div><span>FORM INQUIRY</span></div>
+    <div class="sec-title" style="font-size:15px;margin-bottom:6px;color:#e0eaff">Kirim Laporan / Permintaan Layanan</div>
+    <div class="sec-desc" style="color:rgba(255,255,255,0.45);margin-bottom:18px">Isi form di bawah, data akan langsung dikirim ke WhatsApp kami.</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
+
+      <!-- KOLOM KIRI: FORM -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div>
+            <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">Nama Lengkap *</label>
+            <input id="frmNama" type="text" placeholder="Contoh: Budi Santoso" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none"/>
+          </div>
+          <div>
+            <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">No. WA / Email *</label>
+            <input id="frmKontak" type="text" placeholder="08xx / email@..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none"/>
+          </div>
+        </div>
+        <div>
+          <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">Jenis Layanan *</label>
+          <select id="frmLayanan" style="width:100%;box-sizing:border-box;background:rgba(20,40,70,0.95);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none;appearance:none">
+            <option value="" style="background:#0f2744">-- Pilih Layanan --</option>
+            <option value="Retrofit CNC" style="background:#0f2744">Retrofit CNC</option>
+            <option value="Trading Mesin CNC" style="background:#0f2744">Trading Mesin CNC</option>
+            <option value="Perbaikan & Servis" style="background:#0f2744">Perbaikan & Servis</option>
+            <option value="Troubleshooting" style="background:#0f2744">Troubleshooting</option>
+            <option value="Jual Sparepart" style="background:#0f2744">Jual Sparepart</option>
+            <option value="SPM" style="background:#0f2744">Special Purpose Machine (SPM)</option>
+            <option value="HMI · Servo · Inverter" style="background:#0f2744">HMI · Servo · Inverter</option>
+            <option value="Training CNC" style="background:#0f2744">Training CNC</option>
+            <option value="Vision Detector" style="background:#0f2744">Vision Detector</option>
+            <option value="Lainnya" style="background:#0f2744">Lainnya</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">Mesin / Brand *</label>
+          <input id="frmMesin" type="text" placeholder="Contoh: CNC Milling Syntec, Servo Yaskawa..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none"/>
+        </div>
+        <div>
+          <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">Keterangan / Keluhan</label>
+          <textarea id="frmKeluhan" rows="3" placeholder="Jelaskan masalah atau kebutuhan Anda..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none;resize:vertical"></textarea>
+        </div>
+        <div>
+          <label style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:4px">Lokasi</label>
+          <input id="frmLokasi" type="text" placeholder="Kota / Kabupaten" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:8px 11px;font-size:12px;color:#e0eaff;font-family:var(--font);outline:none"/>
+        </div>
+        <div id="frmError" style="display:none;background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.3);border-radius:7px;padding:8px 11px;font-size:11px;color:#fca5a5"></div>
+        <button onclick="kirimLaporan()" style="background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;border-radius:7px;padding:10px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font)">
+          <i class="ti ti-brand-whatsapp" style="font-size:15px"></i> Kirim via WhatsApp
+        </button>
+        <div style="font-size:10px;color:rgba(255,255,255,0.25);text-align:center">Data Anda akan dikirim langsung ke WhatsApp Dynamix Vision Automation untuk ditindaklanjuti.</div>
+      </div>
+
+      <!-- KOLOM KANAN: UPLOAD FOTO -->
+      <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase">Foto Mesin / Kerusakan</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5">Upload foto mesin atau kerusakan (maks. 5 foto). Foto akan dicantumkan di pesan WhatsApp sebagai referensi teknisi.</div>
+
+        <!-- Drop zone -->
+        <div id="frmDropZone" onclick="document.getElementById('frmFileInput').click()" ondragover="frmDragOver(event)" ondragleave="frmDragLeave(event)" ondrop="frmDrop(event)"
+          style="border:1.5px dashed rgba(255,255,255,0.15);border-radius:9px;padding:20px 12px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;display:flex;flex-direction:column;align-items:center;gap:6px">
+          <i class="ti ti-cloud-upload" style="font-size:28px;color:rgba(100,160,255,0.5)"></i>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5)">Klik atau drag foto ke sini</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.25)">JPG, PNG, WEBP · Maks. 5 foto</div>
+        </div>
+        <input id="frmFileInput" type="file" accept="image/*" multiple style="display:none" onchange="frmHandleFiles(this.files)"/>
+
+        <!-- Preview grid -->
+        <div id="frmPreviewGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;display:none"></div>
+
+        <!-- Slideshow preview (muncul kalau ada foto) -->
+        <div id="frmSlideWrap" style="display:none;position:relative;border-radius:9px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);background:#050f1e;aspect-ratio:4/3">
+          <div id="frmSlideImg" style="width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center;transition:background-image .4s ease"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.7) 100%);pointer-events:none"></div>
+          <button onclick="frmSlidePrev()" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.45);border:none;border-radius:5px;width:24px;height:24px;color:#fff;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center"><i class="ti ti-chevron-left"></i></button>
+          <button onclick="frmSlideNext()" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.45);border:none;border-radius:5px;width:24px;height:24px;color:#fff;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center"><i class="ti ti-chevron-right"></i></button>
+          <div id="frmSlideCounter" style="position:absolute;bottom:7px;right:9px;font-size:9px;font-weight:700;color:rgba(255,255,255,0.7);font-family:var(--font-cond)">1 / 1</div>
+          <button onclick="frmRemoveCurrent()" style="position:absolute;top:6px;right:6px;background:rgba(220,38,38,0.7);border:none;border-radius:5px;width:22px;height:22px;color:#fff;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center"><i class="ti ti-trash"></i></button>
+        </div>
+
+        <!-- Thumbnail strip -->
+        <div id="frmThumbStrip" style="display:none;display:flex;gap:5px;overflow-x:auto;padding-bottom:2px"></div>
+
+        <div id="frmPhotoCount" style="font-size:10px;color:rgba(255,255,255,0.3);text-align:center;display:none"></div>
       </div>
 
     </div>
@@ -460,6 +576,7 @@
   </div>
 </div>
 
+<script src="inline-script.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
