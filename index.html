@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=1280, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Syntec Indonesia – Service & Retrofit CNC Syntec | Dynamix Vision Automation</title>
   <meta name="description" content="Supplier & spesialis CNC Syntec Indonesia. Jasa service, retrofit, instalasi, dan troubleshooting mesin CNC Syntec, Delta, Yaskawa, Mitsubishi di Bogor & seluruh Indonesia.">
   <meta name="keywords" content="syntec indonesia, supplier syntec indonesia, CNC syntec, retrofit CNC syntec, service mesin CNC, troubleshooting CNC, CNC automation indonesia, delta CNC, yaskawa indonesia, mitsubishi CNC, perbaikan mesin CNC bogor">
@@ -301,18 +301,18 @@
     <div class="eyebrow"><div class="eline"></div><span>KONTAK</span></div>
     <div class="sec-title" style="font-size:15px;margin-bottom:14px">Hubungi kami sekarang</div>
 
-    <div style="display:grid;grid-template-columns:0.8fr 1fr 0.8fr;gap:12px;align-items:stretch">
+    <div style="display:grid;grid-template-columns:50% 50%;gap:12px;align-items:stretch">
 
-      <!-- BINGKAI KIRI: info kontak -->
-      <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden">
-        <!-- FOTO HEADER -->
+      <!-- BINGKAI KIRI GABUNGAN: info kontak + alur layanan -->
+      <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden;display:flex;flex-direction:column">
+
+        <!-- FOTO HEADER (full width) -->
         <div style="position:relative;width:100%;height:88px;overflow:hidden;flex-shrink:0">
           <img id="contactProfilePhoto"
                src="images/contact-header.jpg"
                alt="Dynamix Photo"
                style="width:100%;height:100%;object-fit:cover;object-position:center;display:block"/>
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,15,30,0.15) 0%,rgba(5,15,30,0.82) 100%)"></div>
-          <!-- nama + role overlay di atas foto -->
           <div style="position:absolute;bottom:10px;left:13px;right:13px;z-index:2">
            <div style="font-size:13px;font-weight:800;color:#fff;font-family:var(--font-cond);letter-spacing:0.8px;line-height:1.2;text-shadow:0 1px 6px rgba(0,0,0,0.6)">Dynami<span style="background:linear-gradient(90deg,#60A5FA 50%,#ff7a00 50%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;">x</span> Vision Automation</div>
             <div style="font-size:9px;color:rgba(255,255,255,0.7);margin-top:3px;display:flex;align-items:center;gap:5px;flex-wrap:wrap">
@@ -320,80 +320,78 @@
               <span style="width:3px;height:3px;border-radius:50%;background:var(--blue2);display:inline-block;flex-shrink:0"></span>Nanggerang, Bogor
             </div>
           </div>
-          <!-- badge pojok kanan atas -->
           <div style="position:absolute;top:9px;right:10px;background:var(--blue);border-radius:4px;padding:3px 8px;font-size:8px;font-weight:700;color:#fff;font-family:var(--font-cond);letter-spacing:1px">VERIFIED</div>
         </div>
 
-        <div style="padding:10px 15px;display:flex;flex-direction:column;gap:6px">
+        <!-- ISI: 2 kolom — info kontak (kiri) | alur layanan (kanan) -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;flex:1;min-height:0">
 
-          <div style="display:none"></div>
+          <!-- Kolom info kontak -->
+          <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px;border-right:1px solid rgba(255,255,255,0.07)">
 
-          <!-- stats -->
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;background:rgba(0,0,0,0.2)" id="statsBox">
-            <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px;border-right:1px solid rgba(255,255,255,0.07)">
-              <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statProyek">0</div>
-              <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Proyek</div>
+            <!-- stats -->
+            <div style="display:flex;border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;background:rgba(0,0,0,0.2)" id="statsBox">
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px;border-right:1px solid rgba(255,255,255,0.07)">
+                <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statProyek">0</div>
+                <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Proyek</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px;border-right:1px solid rgba(255,255,255,0.07)">
+                <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statTahun">0</div>
+                <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Tahun</div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px">
+                <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statBrand">0</div>
+                <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Brand</div>
+              </div>
             </div>
-            <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px;border-right:1px solid rgba(255,255,255,0.07)">
-              <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statTahun">0</div>
-              <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Tahun</div>
+
+            <!-- kontak rows -->
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
+                <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-brand-whatsapp"></i></div>
+                <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">WhatsApp</div><div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">0898-555-1050</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
+                <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-mail"></i></div>
+                <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">Email</div><div style="font-size:9px;font-weight:600;color:#e0eaff;margin-top:1px">dynamixvisionautomation@gmail.com</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
+                <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-map-pin"></i></div>
+                <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">Lokasi</div><div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">Nanggerang, Bogor, Jawa Barat</div></div>
+              </div>
             </div>
-            <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:5px 4px">
-              <div style="font-size:16px;font-weight:800;color:var(--blue2);font-family:var(--font-cond);line-height:1" id="statBrand">0</div>
-              <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-top:2px">Brand</div>
+
+            <!-- buttons -->
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <button onclick="window.open('https://wa.me/6289855551050?text=Halo%20Dynamix%2C%20saya%20ingin%20konsultasi%20mengenai%20layanan%20CNC%20Anda.','_blank')" style="background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;border-radius:7px;padding:7px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:var(--font)"><i class="ti ti-brand-whatsapp" style="font-size:13px"></i> Chat WhatsApp Sekarang</button>
+              <button onclick="window.location.href='mailto:dynamixVisionAutomation@gmail.com?subject=Konsultasi%20Layanan%20CNC&body=Halo%20Dynamix%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda.'" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--font);display:flex;align-items:center;justify-content:center;gap:6px"><i class="ti ti-mail"></i> Kirim Email</button>
+            </div>
+
+            <!-- jam operasional -->
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px;display:flex;align-items:center;gap:8px">
+              <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-clock"></i></div>
+              <div>
+                <div style="font-size:7.5px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase">Jam Operasional</div>
+                <div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">Senin – Sabtu &nbsp;·&nbsp; 08.00 – 17.00 WIB</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom alur layanan -->
+          <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1">
+            <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase;flex-shrink:0">Alur Layanan</div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:0" id="flowChartWrap">
+              <div style="display:flex;flex-direction:column;align-items:stretch;gap:0" id="fcSteps"></div>
+              <div style="margin-top:6px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
+                <div id="fcProgress" style="height:100%;width:0%;background:#378ADD;border-radius:2px;transition:width .12s linear"></div>
+              </div>
+              <div id="fcInfo" style="margin-top:6px;background:rgba(29,111,216,0.1);border:1px solid rgba(29,111,216,0.2);border-radius:6px;padding:6px 8px;min-height:36px">
+                <div id="fcInfoText" style="font-size:9px;color:rgba(180,210,255,0.8);line-height:1.5">Memulai alur layanan...</div>
+              </div>
             </div>
           </div>
 
-          <!-- kontak rows -->
-          <div style="display:flex;flex-direction:column;gap:4px">
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
-              <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-brand-whatsapp"></i></div>
-              <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">WhatsApp</div><div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">0898-555-1050</div></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
-              <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-mail"></i></div>
-              <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">Email</div><div style="font-size:9px;font-weight:600;color:#e0eaff;margin-top:1px">dynamixvisionautomation@gmail.com</div></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px">
-              <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-map-pin"></i></div>
-              <div><div style="font-size:7.5px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase">Lokasi</div><div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">Nanggerang, Bogor, Jawa Barat</div></div>
-            </div>
-          </div>
-
-          <!-- buttons -->
-          <div style="display:flex;flex-direction:column;gap:4px">
-            <button onclick="window.open('https://wa.me/6289855551050?text=Halo%20Dynamix%2C%20saya%20ingin%20konsultasi%20mengenai%20layanan%20CNC%20Anda.','_blank')" style="background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;border-radius:7px;padding:7px;font-size:11px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:var(--font)"><i class="ti ti-brand-whatsapp" style="font-size:13px"></i> Chat WhatsApp Sekarang</button>
-            <button onclick="window.location.href='mailto:dynamixVisionAutomation@gmail.com?subject=Konsultasi%20Layanan%20CNC&body=Halo%20Dynamix%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20Anda.'" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.12);border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--font);display:flex;align-items:center;justify-content:center;gap:6px"><i class="ti ti-mail"></i> Kirim Email</button>
-          </div>
-
-          <!-- jam operasional -->
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:5px 9px;display:flex;align-items:center;gap:8px">
-            <div style="width:22px;height:22px;border-radius:5px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:11px;flex-shrink:0"><i class="ti ti-clock"></i></div>
-            <div>
-              <div style="font-size:7.5px;color:rgba(255,255,255,0.4);letter-spacing:0.5px;text-transform:uppercase">Jam Operasional</div>
-              <div style="font-size:10px;font-weight:600;color:#e0eaff;margin-top:1px">Senin – Sabtu &nbsp;·&nbsp; 08.00 – 17.00 WIB</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- BINGKAI TENGAH: flowchart animasi alur layanan -->
-      <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1">
-          <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase;flex-shrink:0">Alur Layanan</div>
-          <div style="flex:1;display:flex;flex-direction:column;gap:0" id="flowChartWrap">
-
-            <div style="display:flex;flex-direction:column;align-items:stretch;gap:0" id="fcSteps"></div>
-
-            <div style="margin-top:6px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
-              <div id="fcProgress" style="height:100%;width:0%;background:#378ADD;border-radius:2px;transition:width .12s linear"></div>
-            </div>
-
-            <div id="fcInfo" style="margin-top:6px;background:rgba(29,111,216,0.1);border:1px solid rgba(29,111,216,0.2);border-radius:6px;padding:6px 8px;min-height:36px">
-              <div id="fcInfoText" style="font-size:9px;color:rgba(180,210,255,0.8);line-height:1.5">Memulai alur layanan...</div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -482,8 +480,33 @@
         <div style="font-size:10px;color:rgba(255,255,255,0.25);text-align:center">Data Anda akan dikirim langsung ke WhatsApp Dynamix Vision Automation untuk ditindaklanjuti.</div>
       </div>
 
-      <!-- KOLOM KANAN: UPLOAD FOTO -->
+      <!-- KOLOM KANAN: UPLOAD FOTO + INFO -->
       <div style="background:linear-gradient(135deg,#0b1e38 0%,#0f2744 60%,#152f55 100%);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px">
+
+        <!-- Keunggulan layanan -->
+        <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase">Kenapa Pilih Kami?</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:center;gap:9px;background:rgba(29,111,216,0.08);border:1px solid rgba(29,111,216,0.18);border-radius:8px;padding:7px 10px">
+            <div style="width:26px;height:26px;border-radius:6px;background:rgba(29,111,216,0.25);display:flex;align-items:center;justify-content:center;color:#7db9ff;font-size:13px;flex-shrink:0"><i class="ti ti-bolt"></i></div>
+            <div><div style="font-size:10px;font-weight:700;color:#e0eaff">Respon Cepat</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px">Notifikasi WhatsApp instan, ditindaklanjuti hari itu juga</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;background:rgba(22,163,74,0.08);border:1px solid rgba(22,163,74,0.18);border-radius:8px;padding:7px 10px">
+            <div style="width:26px;height:26px;border-radius:6px;background:rgba(22,163,74,0.25);display:flex;align-items:center;justify-content:center;color:#6ee7a0;font-size:13px;flex-shrink:0"><i class="ti ti-shield-check"></i></div>
+            <div><div style="font-size:10px;font-weight:700;color:#e0eaff">Garansi Servis</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px">Setiap pekerjaan disertai garansi & laporan hasil servis</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;background:rgba(186,117,23,0.08);border:1px solid rgba(186,117,23,0.18);border-radius:8px;padding:7px 10px">
+            <div style="width:26px;height:26px;border-radius:6px;background:rgba(186,117,23,0.25);display:flex;align-items:center;justify-content:center;color:#fbbf24;font-size:13px;flex-shrink:0"><i class="ti ti-tool"></i></div>
+            <div><div style="font-size:10px;font-weight:700;color:#e0eaff">Teknisi Berpengalaman</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px">Spesialis CNC Syntec, Mitsubishi, Yaskawa & Delta</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;background:rgba(127,119,221,0.08);border:1px solid rgba(127,119,221,0.18);border-radius:8px;padding:7px 10px">
+            <div style="width:26px;height:26px;border-radius:6px;background:rgba(127,119,221,0.25);display:flex;align-items:center;justify-content:center;color:#a5b4fc;font-size:13px;flex-shrink:0"><i class="ti ti-map-pin"></i></div>
+            <div><div style="font-size:10px;font-weight:700;color:#e0eaff">On-site & Workshop</div><div style="font-size:9px;color:rgba(255,255,255,0.4);margin-top:1px">Kami datang ke lokasi Anda atau pengerjaan di workshop</div></div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height:1px;background:rgba(255,255,255,0.07);border-radius:2px"></div>
+
         <div style="font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.35);font-family:var(--font-cond);font-weight:700;text-transform:uppercase">Foto Mesin / Kerusakan</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5">Upload foto mesin atau kerusakan (maks. 5 foto). Foto akan dicantumkan di pesan WhatsApp sebagai referensi teknisi.</div>
 

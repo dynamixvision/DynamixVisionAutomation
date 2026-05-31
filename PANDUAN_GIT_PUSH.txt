@@ -1,0 +1,105 @@
+================================================================
+        PANDUAN GIT PUSH — DYNAMIX VISION AUTOMATION
+================================================================
+Dibuat untuk: Muhamad Sayid Akil
+Repo        : https://github.com/dynamixvision/DynamixVisionAutomation
+Website     : https://dynamixvision.github.io/DynamixVisionAutomation/
+================================================================
+
+
+KAPAN PAKAI INI?
+-----------------
+Setiap kali kamu edit file (index.html, style.css, inline-script.js,
+atau file apapun di folder Repo), jalankan langkah di bawah supaya
+perubahan langsung terupload ke GitHub dan website ikut update.
+
+
+================================================================
+LANGKAH-LANGKAH
+================================================================
+
+LANGKAH 1 — Buka Command Prompt
+---------------------------------
+Tekan  Win + R
+Ketik  cmd
+Tekan  Enter
+
+
+LANGKAH 2 — Masuk ke folder repo
+----------------------------------
+Ketik perintah ini lalu tekan Enter:
+
+  cd "C:\Users\LENOVO\OneDrive\Desktop\File Path\MUHAMAD SAYID AKIL\All File\DYNAMIX\Web\Repo"
+
+
+LANGKAH 3 — Cek file yang berubah (opsional tapi bagus)
+---------------------------------------------------------
+  git status
+
+  → Akan tampil daftar file yang diubah/ditambah/dihapus.
+  → Warna merah = belum di-add, warna hijau = sudah di-add.
+
+
+LANGKAH 4 — Add semua perubahan
+---------------------------------
+  git add .
+
+  → Titik (.) artinya "semua file". 
+  → Perintah ini mendaftarkan semua perubahan siap untuk di-commit.
+
+
+LANGKAH 5 — Commit (simpan snapshot perubahan)
+------------------------------------------------
+  git commit -m "update website Dynamix"
+
+  → Tanda kutip adalah pesan/keterangan perubahan.
+  → Boleh diganti sesuai isi update, contoh:
+       git commit -m "tambah section testimoni"
+       git commit -m "fix tampilan kontak"
+       git commit -m "update SEO dan meta tags"
+
+
+LANGKAH 6 — Push ke GitHub
+----------------------------
+  git push origin main
+
+  → Ini yang mengirim file ke GitHub.
+  → Tunggu sampai muncul tulisan "main -> main", artinya berhasil.
+
+
+================================================================
+SETELAH PUSH
+================================================================
+
+- Tunggu 1-2 menit
+- Buka browser, akses:
+  https://dynamixvision.github.io/DynamixVisionAutomation/
+- Tekan  Ctrl + Shift + R  (hard refresh) supaya cache browser ikut update
+
+
+================================================================
+STRUKTUR FILE DI FOLDER REPO
+================================================================
+
+Repo/
+├── index.html          → halaman utama website
+├── inline-script.js    → JavaScript (upload foto, flowchart, kirim WA)
+├── style.css           → tampilan / desain website
+├── sitemap.xml         → peta website untuk Google
+├── googleeb439dce197566fa.html  → verifikasi Google Search Console
+├── images/             → semua gambar (logo, gallery, slideshow, dll)
+└── Loading/            → file-file loading screen (tidak tampil di website)
+
+
+================================================================
+CATATAN PENTING
+================================================================
+
+1. Jangan hapus file .git (folder tersembunyi) — itu inti dari git
+2. Kalau ada error "rejected", coba:
+      git pull origin main
+   lalu ulangi dari langkah 4
+3. Kalau diminta login, masukkan username & password GitHub kamu
+4. Branch kamu = main (bukan master)
+
+================================================================
