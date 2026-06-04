@@ -264,3 +264,76 @@
 .modal-close-btn{background:var(--bg3);color:var(--text2);border:1px solid var(--border);border-radius:7px;padding:11px 14px;font-size:12px;cursor:pointer;font-family:var(--font)}
 
 .section-accent{height:1px;background:var(--border)}
+
+/* ===== RESPONSIVE MOBILE (max 520px) ===== */
+@media (max-width: 520px) {
+
+  /* Site wrapper */
+  .site { border-radius: 0; border: none; }
+
+  /* NAVBAR */
+  .nav-menu { display: none !important; }
+  .navbar { padding: 0 14px; }
+  .brand-mark { width: 120px; height: 32px; }
+  .nav-btn { font-size: 10px; padding: 7px 10px; }
+
+  /* SLIDESHOW */
+  .vslide-wrap { height: 220px; }
+  .vslide-body { left: 18px; max-width: 80%; }
+  .vslide-title { font-size: 18px !important; }
+  .vslide-desc { font-size: 10px !important; display: none; }
+  .vslide-deco { display: none; }
+
+  /* SECTION */
+  .section { padding: 20px 14px; }
+  .sec-title { font-size: 14px; }
+
+  /* LAYANAN: grid 3 kolom jadi 2 kolom */
+  .svc-layout { grid-template-columns: 1fr !important; }
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-photo-frame { display: none; }
+
+  /* DRIVER */
+  .driver-section { padding: 16px 14px 20px; }
+
+  /* CONTACT: 2 kolom jadi 1 kolom */
+  div[style*="grid-template-columns:50% 50%"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  /* Kontak inner (info + alur layanan): 2 kolom jadi 1 kolom */
+  div[style*="grid-template-columns:1fr 1fr;gap:0"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Alur layanan border kiri hilang di HP */
+  div[style*="border-right:1px solid rgba(255,255,255,0.07)"] {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  }
+
+  /* FORM INQUIRY: 2 kolom jadi 1 kolom */
+  div[style*="grid-template-columns:1fr 1fr;gap:14px"] {
+    grid-template-columns: 1fr !important;
+  }
+  div[style*="grid-template-columns:1fr 1fr;gap:10px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* fcInfo min-height lebih tinggi */
+  #fcInfo { min-height: 64px !important; }
+
+  /* Galeri min-height */
+  #crSlideFrame { min-height: 180px !important; }
+
+  /* Sembunyikan keunggulan di HP biar form tidak terlalu panjang */
+  #frmKeunggulan { display: none !important; }
+
+  /* CONTACT section padding */
+  .contact-section { padding: 0 14px 20px; }
+
+  /* FOOTER */
+  .footer-bar { padding: 16px 14px; }
+  .footer-top { flex-direction: column !important; gap: 10px !important; }
+  .footer-right { text-align: left; }
+  .footer-contact-row { font-size: 10px; }
+}
