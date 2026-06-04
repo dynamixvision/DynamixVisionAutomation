@@ -133,7 +133,7 @@
 
 /* DRIVER */
 .driver-section{padding:20px 24px 28px;background:linear-gradient(180deg,var(--bg3) 0%,var(--bg) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.driver-track-wrap{overflow:hidden;position:relative;width:100%}
+.driver-track-wrap{overflow:hidden;position:relative;width:100%;padding-top:4px;margin-top:-4px}
 .driver-track{display:flex;gap:8px;width:max-content;animation:driverScroll 28s linear infinite}
 .driver-track:hover{animation-play-state:paused}
 .driver-card{flex-shrink:0;width:160px}

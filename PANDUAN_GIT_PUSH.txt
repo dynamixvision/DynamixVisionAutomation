@@ -103,3 +103,8 @@ CATATAN PENTING
 4. Branch kamu = main (bukan master)
 
 ================================================================
+
+git add .
+git commit -m "update website Dynamix"
+git push origin main
+
