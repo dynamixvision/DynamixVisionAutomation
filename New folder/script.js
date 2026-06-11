@@ -40,19 +40,44 @@ function frmRenderPhotos(){
   const thumbStrip = document.getElementById('frmThumbStrip');
   const countEl = document.getElementById('frmPhotoCount');
   const dropZone = document.getElementById('frmDropZone');
+  const keunggulan = document.getElementById('frmKeunggulan');
 
   if(frmPhotos.length === 0){
     slideWrap.style.display = 'none';
     thumbStrip.style.display = 'none';
     countEl.style.display = 'none';
     dropZone.style.display = 'flex';
+    if(keunggulan) keunggulan.style.display = 'flex';
+    // Reset textarea keluhan ke ukuran normal
+    const keluhan = document.getElementById('frmKeluhan');
+    if(keluhan) keluhan.style.minHeight = '';
     return;
+  }
+
+  // Sembunyikan "Kenapa Pilih Kami?" saat ada foto
+  if(keunggulan) keunggulan.style.display = 'none';
+
+  // Perbesar textarea Keterangan/Keluhan agar form kiri sejajar dengan kolom foto kanan
+  const keluhan = document.getElementById('frmKeluhan');
+  if(keluhan && frmPhotos.length === 1) {
+    // Hanya set pertama kali foto masuk, agar tidak override resize manual
+    keluhan.style.minHeight = '20px';
   }
 
   dropZone.style.display = frmPhotos.length >= 5 ? 'none' : 'flex';
   slideWrap.style.display = 'block';
   thumbStrip.style.display = 'flex';
   countEl.style.display = 'block';
+
+  // Auto-scroll ke form (Nama Lengkap) saat foto pertama berhasil diupload
+  if(frmPhotos.length === 1){
+    const formSection = document.getElementById('laporan');
+    if(formSection){
+      setTimeout(()=>{
+        formSection.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 150);
+    }
+  }
 
   if(frmSlideIdx >= frmPhotos.length) frmSlideIdx = frmPhotos.length - 1;
 
@@ -111,21 +136,23 @@ _Dikirim via website Dynamix Vision Automation_`;
 // ===== FLOWCHART ALUR LAYANAN =====
 (function(){
   const fcStepsData = [
-    {icon:'📋', tag:'Customer', title:'Buat laporan', color:'#378ADD', info:'Customer isi form inquiry & kirim foto mesin ke WhatsApp teknisi Dynamix.'},
-    {icon:'📲', tag:'Notifikasi', title:'Laporan diterima', color:'#1D9E75', info:'Tim Dynamix terima notifikasi WA instan, data sudah terformat rapi.'},
-    {icon:'🔍', tag:'Analisa', title:'Identifikasi masalah', color:'#7F77DD', info:'Teknisi analisa laporan, foto mesin, dan identifikasi jenis kerusakan.'},
-    {icon:'💡', tag:'Estimasi', title:'Penawaran solusi', color:'#BA7517', info:'Dynamix sampaikan estimasi biaya, waktu, dan spare part yang dibutuhkan.'},
-    {icon:'⚙️', tag:'Pengerjaan', title:'Eksekusi layanan', color:'#D85A30', info:'Teknisi kerjakan on-site atau di workshop — servis, retrofit, instalasi.'},
-    {icon:'🎯', tag:'QC', title:'Quality check', color:'#639922', info:'Uji coba mesin, kalibrasi parameter, verifikasi akurasi sebelum serah terima.'},
-    {icon:'📨', tag:'Selesai', title:'Feedback ke customer', color:'#378ADD', info:'Customer terima laporan hasil, garansi servis & training operator.'},
+    {icon:'📋', tag:'Customer', title:'Buat laporan', color:'#378ADD', info:'Customer isi form inquiry & kirim foto mesin ke WhatsApp teknisi Dynamix.           '},
+    {icon:'📲', tag:'Notifikasi', title:'Laporan diterima', color:'#1D9E75', info:'Tim Dynamix terima notifikasi WA instan, data sudah terformat rapi.			 '},
+    {icon:'🔍', tag:'Analisa', title:'Identifikasi masalah', color:'#7F77DD', info:'Teknisi analisa laporan, foto mesin, dan identifikasi jenis kerusakan.		 '},
+    {icon:'💡', tag:'Estimasi', title:'Penawaran solusi', color:'#BA7517', info:'Dynamix sampaikan estimasi biaya, waktu, dan spare part yang dibutuhkan. 		 '},
+    {icon:'⚙️', tag:'Pengerjaan', title:'Eksekusi layanan', color:'#D85A30', info:'Teknisi kerjakan on-site atau di workshop — servis, retrofit, instalasi. 	 '},
+    {icon:'🎯', tag:'QC', title:'Quality check', color:'#639922', info:'Uji coba mesin, kalibrasi parameter, verifikasi akurasi sebelum serah terima. 		     '},
+    {icon:'📨', tag:'Selesai', title:'Feedback ke customer', color:'#378ADD', info:'Customer menerima laporan hasil pengerjaan lengkap, sertifikat garansi servis, serta training operator agar mesin dapat dioperasikan secara optimal dan mandiri.'},
   ];
 
   const wrap = document.getElementById('fcSteps');
   if(!wrap) return;
 
+  // Buat semua step LANGSUNG VISIBLE (permanen, tidak bergerak)
   fcStepsData.forEach((s, i) => {
     const row = document.createElement('div');
-    row.style.cssText = 'display:flex;align-items:center;gap:6px';
+    row.id = 'fcrow' + i;
+    row.style.cssText = 'display:flex;align-items:center;gap:6px;opacity:1;transition:none';
     row.innerHTML = `
       <div id="fcnum${i}" style="width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:7px;color:rgba(255,255,255,0.3);flex-shrink:0;transition:background .3s,border-color .3s,color .3s">${i+1}</div>
       <div id="fcicon${i}" style="font-size:13px;flex-shrink:0;transition:transform .3s">${s.icon}</div>
@@ -137,7 +164,8 @@ _Dikirim via website Dynamix Vision Automation_`;
 
     if(i < fcStepsData.length - 1) {
       const conn = document.createElement('div');
-      conn.style.cssText = 'display:flex;align-items:center;gap:6px';
+      conn.id = 'fcconn' + i;
+      conn.style.cssText = 'display:flex;align-items:center;gap:6px;opacity:1';
       conn.innerHTML = `<div style="width:14px;flex-shrink:0;display:flex;justify-content:center"><div style="width:1.5px;height:14px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden"><div id="fcconnfill${i}" style="width:100%;height:0%;background:#378ADD;border-radius:2px;transition:height .05s linear"></div></div></div>`;
       wrap.appendChild(conn);
     }
@@ -145,6 +173,7 @@ _Dikirim via website Dynamix Vision Automation_`;
 
   const HOLD=1000, FILL_MS=350, FILL_STEPS=35;
 
+  // Reset: hanya reset warna highlight, TIDAK menyembunyikan step
   function fcReset(){
     fcStepsData.forEach((s,i)=>{
       const body=document.getElementById('fcbody'+i), icon=document.getElementById('fcicon'+i);
@@ -153,9 +182,12 @@ _Dikirim via website Dynamix Vision Automation_`;
       if(icon) icon.style.transform='scale(1)';
       if(num){num.style.background='transparent';num.style.borderColor='rgba(255,255,255,0.15)';num.style.color='rgba(255,255,255,0.3)';}
       if(tag) tag.style.color='rgba(255,255,255,0.3)';
-      if(i<fcStepsData.length-1){const f=document.getElementById('fcconnfill'+i);if(f)f.style.height='0%';}
+      if(i<fcStepsData.length-1){
+        const f=document.getElementById('fcconnfill'+i);if(f)f.style.height='0%';
+      }
     });
     const p=document.getElementById('fcProgress');if(p)p.style.width='0%';
+    const txt=document.getElementById('fcInfoText');if(txt)txt.textContent='Memulai alur layanan...';
   }
 
   function fcActivate(idx){
@@ -190,7 +222,7 @@ _Dikirim via website Dynamix Vision Automation_`;
       fcFillConn(idx,()=>{
         fcDeactivate(idx);
         const next=(idx+1)%fcStepsData.length;
-        if(next===0){setTimeout(()=>{fcReset();setTimeout(()=>fcRun(0),300);},500);}
+        if(next===0){setTimeout(()=>{fcReset();setTimeout(()=>fcRun(0),400);},500);}
         else fcRun(next);
       });
     },HOLD);
@@ -198,6 +230,7 @@ _Dikirim via website Dynamix Vision Automation_`;
 
   setTimeout(()=>fcRun(0),800);
 })();
+
 
 
 // ===== DRIVER DATA =====
@@ -322,7 +355,7 @@ function closeModalNow(){document.getElementById('modalBackdrop').classList.remo
 
 // ===== CONTACT PHOTO SLIDESHOW =====
 (function(){
-  const labels=['4 Axis Cutting Trial','Accuracy Check','Control Repair','Control Retrofit','Machine Retrofit','Machine Calibration','New Project Wiring','Retrofit Rewiring','Retrofit 6TA-E','Set Zero'];
+  const labels=['Upgrade Sumbu Ke-4 CNC','Pengecekan Akurasi','Perbaikan Kontrol','Retrofit Kontrol','Retrofit Mesin','Kalibrasi Mesin','Wiring Mesin Custom','Rewiring Retrofit','Retrofit 6TA-E','Setting Zero','Penggantian Driver Delta ASD B3','Penggantian LCD Syntec','Penggantian Inverter Delta C2000'];
   const frame=document.getElementById('crSlideFrame');
   if(!frame)return;
   const imgs=frame.querySelectorAll('.cr-slide-img');

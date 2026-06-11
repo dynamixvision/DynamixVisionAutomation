@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dynamixvision.github.io/DynamixVisionAutomation/sitemap.xml
